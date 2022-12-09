@@ -1,0 +1,6 @@
+wrap\_sheet
+===========
+
+.. currentmodule:: pyaedt.modeler.Primitives
+
+.. automethod:: Polyline.wrap_sheet

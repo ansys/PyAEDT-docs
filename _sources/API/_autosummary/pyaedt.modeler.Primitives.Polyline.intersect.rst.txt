@@ -1,0 +1,6 @@
+intersect
+=========
+
+.. currentmodule:: pyaedt.modeler.Primitives
+
+.. automethod:: Polyline.intersect

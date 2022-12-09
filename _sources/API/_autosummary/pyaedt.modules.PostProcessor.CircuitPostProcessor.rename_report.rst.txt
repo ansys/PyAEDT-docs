@@ -1,0 +1,6 @@
+rename\_report
+==============
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.rename_report

@@ -1,0 +1,64 @@
+﻿pyaedt.edb\_core.edb\_data.layer\_data.EDBLayers
+================================================
+
+.. currentmodule:: pyaedt.edb_core.edb_data.layer_data
+
+.. autoclass:: EDBLayers
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      EDBLayers.add_layer
+      
+      
+      EDBLayers.add_outline_layer
+      
+      
+      EDBLayers.insert_layer_above
+      
+      
+      EDBLayers.remove_layer
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      
+      EDBLayers.edb_layer_collection
+      
+      
+      EDBLayers.edb_layers
+      
+      
+      EDBLayers.layer_collection
+      
+      
+      EDBLayers.layer_collection_mode
+      
+      
+      EDBLayers.layer_types
+      
+      
+      EDBLayers.layers
+      
+      
+      EDBLayers.signal_layers
+      
+      
+      EDBLayers.stackup_mode
+      
+   
+   

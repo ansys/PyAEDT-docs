@@ -1,0 +1,6 @@
+coordinate\_system
+==================
+
+.. currentmodule:: pyaedt.modeler.Object3d
+
+.. autoproperty:: Point.coordinate_system

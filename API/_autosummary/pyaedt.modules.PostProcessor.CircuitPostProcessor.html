@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>pyaedt.modules.PostProcessor.CircuitPostProcessor &#8212; PyAEDT</title>
+    
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css\ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    
+        <link href="../../_static/css/breadcrumbs.css" rel="stylesheet">
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../_static/ansys-favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="available_display_types" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_display_types.html" />
+    <link rel="prev" title="Postprocessing" href="../Post.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    <img src="../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../Getting_started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../User_guide/index.html">
+  User guide
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  API reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../examples/index.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../Contributing.html">
+  Contribute
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/pyaedt" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/pyaedt/discussions" rel="noopener" target="_blank" title="Support"><span><i class="fa fa-comment fa-fw"></i></span>
+            <label class="sr-only">Support</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+    
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../../index.html">PyAEDT</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >API reference</a> » </li>
+          <li class="nav-item nav-item-2"><a href="../Post.html" accesskey="U">Postprocessing</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">pyaedt.modules.PostProcessor.CircuitPostProcessor</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Common.html">
+   Desktop and common classes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CoreEdb.html">
+   EDB editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Application.html">
+   AEDT apps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../MaterialManagement.html">
+   Material and stackup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Primitives.html">
+   Modeler and  primitives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CoreModules.html">
+   AEDT modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Mesh.html">
+   Mesh operations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CableModeling.html">
+   Cable modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Setup.html">
+   Setup
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../Post.html">
+   Postprocessing
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="current reference internal" href="#">
+     pyaedt.modules.PostProcessor.CircuitPostProcessor
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_display_types.html">
+       available_display_types
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_quantities_categories.html">
+       available_quantities_categories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_report_quantities.html">
+       available_report_quantities
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.copy_report_data.html">
+       copy_report_data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_ami_initial_response_plot.html">
+       create_ami_initial_response_plot
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_ami_statistical_eye_plot.html">
+       create_ami_statistical_eye_plot
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_rectangular_plot.html">
+       create_rectangular_plot
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_report.html">
+       create_report
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_report_from_configuration.html">
+       create_report_from_configuration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_statistical_eye_plot.html">
+       create_statistical_eye_plot
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.delete_report.html">
+       delete_report
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_csv.html">
+       export_report_to_csv
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_file.html">
+       export_report_to_file
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_jpg.html">
+       export_report_to_jpg
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.get_report_data.html">
+       get_report_data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.get_solution_data.html">
+       get_solution_data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.get_solution_data_per_variation.html">
+       get_solution_data_per_variation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.rename_report.html">
+       rename_report
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.sample_ami_waveform.html">
+       sample_ami_waveform
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.sample_waveform.html">
+       sample_waveform
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.steal_focus_oneditor.html">
+       steal_focus_oneditor
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.all_report_names.html">
+       all_report_names
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_report_types.html">
+       available_report_types
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.logger.html">
+       logger
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.modeler.html">
+       modeler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.oreportsetup.html">
+       oreportsetup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.post_solution_type.html">
+       post_solution_type
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.AdvancedPostProcessing.PostProcessor.html">
+     pyaedt.modules.AdvancedPostProcessing.PostProcessor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.solutions.SolutionData.html">
+     pyaedt.modules.solutions.SolutionData
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.solutions.FieldPlot.html">
+     pyaedt.modules.solutions.FieldPlot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.solutions.FfdSolutionData.html">
+     pyaedt.modules.solutions.FfdSolutionData
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.AdvancedPostProcessing.ModelPlotter.html">
+     pyaedt.modules.AdvancedPostProcessing.ModelPlotter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.report_templates.Trace.html">
+     pyaedt.modules.report_templates.Trace
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.report_templates.LimitLine.html">
+     pyaedt.modules.report_templates.LimitLine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.report_templates.Standard.html">
+     pyaedt.modules.report_templates.Standard
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.report_templates.Fields.html">
+     pyaedt.modules.report_templates.Fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.report_templates.NearField.html">
+     pyaedt.modules.report_templates.NearField
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.report_templates.FarField.html">
+     pyaedt.modules.report_templates.FarField
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.report_templates.EyeDiagram.html">
+     pyaedt.modules.report_templates.EyeDiagram
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.report_templates.Emission.html">
+     pyaedt.modules.report_templates.Emission
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyaedt.modules.report_templates.Spectral.html">
+     pyaedt.modules.report_templates.Spectral
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pyaedt.modules.PostProcessor.CircuitPostProcessor">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     CircuitPostProcessor
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/pyansys/pyaedt/edit/main/doc/source/API/_autosummary/pyaedt.modules.PostProcessor.CircuitPostProcessor.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="pyaedt-modules-postprocessor-circuitpostprocessor">
+<h1>pyaedt.modules.PostProcessor.CircuitPostProcessor<a class="headerlink" href="#pyaedt-modules-postprocessor-circuitpostprocessor" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyaedt.modules.PostProcessor.CircuitPostProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyaedt.modules.PostProcessor.</span></span><span class="sig-name descname"><span class="pre">CircuitPostProcessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyaedt/modules/PostProcessor.html#CircuitPostProcessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyaedt.modules.PostProcessor.CircuitPostProcessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Manages the main AEDT Nexxim postprocessing functions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some functionalities are available only when AEDT is running in the graphical mode.</p>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>app</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyaedt.application.AnalysisNexxim.FieldAnalysisCircuit</span></code></span></dt><dd><p>Inherited parent object. The parent object must provide the members
+<cite>_modeler</cite>, <cite>_desktop</cite>, <cite>_odesign</cite>, and <cite>logger</cite>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_display_types.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.available_display_types" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_display_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.available_display_types</span></code></a>([...])</p></td>
+<td><p>Retrieve display types for a report categories.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_quantities_categories.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.available_quantities_categories" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_quantities_categories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.available_quantities_categories</span></code></a>([...])</p></td>
+<td><p>Compute the list of all available report categories.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_report_quantities.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.available_report_quantities" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_report_quantities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.available_report_quantities</span></code></a>([...])</p></td>
+<td><p>Compute the list of all available report quantities of a given report quantity category.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.copy_report_data.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.copy_report_data" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.copy_report_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.copy_report_data</span></code></a>(PlotName)</p></td>
+<td><p>Copy report data as static data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_ami_initial_response_plot.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.create_ami_initial_response_plot" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_ami_initial_response_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.create_ami_initial_response_plot</span></code></a>(...)</p></td>
+<td><p>Create an AMI initial response plot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_ami_statistical_eye_plot.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.create_ami_statistical_eye_plot" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_ami_statistical_eye_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.create_ami_statistical_eye_plot</span></code></a>(...)</p></td>
+<td><p>Create an AMI statistical eye plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_rectangular_plot.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.create_rectangular_plot" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_rectangular_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.create_rectangular_plot</span></code></a>([...])</p></td>
+<td><p>Create a 2D rectangular plot in AEDT.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_report.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.create_report" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_report"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.create_report</span></code></a>(expressions)</p></td>
+<td><p>Create a report in AEDT.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_report_from_configuration.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.create_report_from_configuration" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_report_from_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.create_report_from_configuration</span></code></a>([...])</p></td>
+<td><p>Create a new report based on json file or dictionary of properties.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_statistical_eye_plot.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.create_statistical_eye_plot" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.create_statistical_eye_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.create_statistical_eye_plot</span></code></a>(...)</p></td>
+<td><p>Create a statistical QuickEye, VerifEye, and/or Statistical Eye plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.delete_report.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.delete_report" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.delete_report"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.delete_report</span></code></a>([PlotName])</p></td>
+<td><p>Delete all reports or specific report.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_csv.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_csv" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.export_report_to_csv</span></code></a>(...)</p></td>
+<td><p>Export the 2D Plot data to a CSV file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_file.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_file" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.export_report_to_file</span></code></a>(...)</p></td>
+<td><p>Export the 2D Plot data to a file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_jpg.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_jpg" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.export_report_to_jpg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.export_report_to_jpg</span></code></a>(...)</p></td>
+<td><p>Export the SParameter plot to a JPG file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.get_report_data.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.get_report_data" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.get_report_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.get_report_data</span></code></a>([...])</p></td>
+<td><p>Generate report data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.get_solution_data.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.get_solution_data" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.get_solution_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.get_solution_data</span></code></a>([...])</p></td>
+<td><p>Get SolutionData of a report in AEDT.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.get_solution_data_per_variation.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.get_solution_data_per_variation" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.get_solution_data_per_variation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.get_solution_data_per_variation</span></code></a>([...])</p></td>
+<td><p>Retrieve solution data for each variation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.rename_report.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.rename_report" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.rename_report"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.rename_report</span></code></a>(PlotName, ...)</p></td>
+<td><p>Rename a plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.sample_ami_waveform.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.sample_ami_waveform" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.sample_ami_waveform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.sample_ami_waveform</span></code></a>(...)</p></td>
+<td><p>Sampling a waveform at clock times plus half unit interval.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.sample_waveform.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.sample_waveform" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.sample_waveform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.sample_waveform</span></code></a>(...[, ...])</p></td>
+<td><p>Sampling a waveform at clock times plus half unit interval.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.steal_focus_oneditor.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.steal_focus_oneditor" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.steal_focus_oneditor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.steal_focus_oneditor</span></code></a>()</p></td>
+<td><p>Remove the selection of an object that would prevent the image from exporting correctly.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.all_report_names.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.all_report_names" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.all_report_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.all_report_names</span></code></a></p></td>
+<td><p>List of all report names.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_report_types.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.available_report_types" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.available_report_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.available_report_types</span></code></a></p></td>
+<td><p>Report types.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.logger.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.logger" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.logger</span></code></a></p></td>
+<td><p>Logger.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.modeler.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.modeler" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.modeler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.modeler</span></code></a></p></td>
+<td><p>Modeler.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.oreportsetup.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.oreportsetup" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.oreportsetup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.oreportsetup</span></code></a></p></td>
+<td><p>Report setup.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyaedt.modules.PostProcessor.CircuitPostProcessor.post_solution_type.html#pyaedt.modules.PostProcessor.CircuitPostProcessor.post_solution_type" title="pyaedt.modules.PostProcessor.CircuitPostProcessor.post_solution_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircuitPostProcessor.post_solution_type</span></code></a></p></td>
+<td><p>Design solution type.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+
+
+              </article>
+              
+
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+plot
+====
+
+.. currentmodule:: pyaedt.edb_core.edb_data.layer_data
+
+.. automethod:: EDBLayer.plot

@@ -1,0 +1,6 @@
+update\_native
+==============
+
+.. currentmodule:: pyaedt.modeler.Object3d
+
+.. automethod:: UserDefinedComponent.update_native

@@ -1,0 +1,6 @@
+export\_report\_to\_csv
+=======================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.export_report_to_csv

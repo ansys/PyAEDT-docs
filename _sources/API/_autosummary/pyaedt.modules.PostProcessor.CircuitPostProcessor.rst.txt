@@ -1,0 +1,109 @@
+﻿pyaedt.modules.PostProcessor.CircuitPostProcessor
+=================================================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. autoclass:: CircuitPostProcessor
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      CircuitPostProcessor.available_display_types
+      
+      
+      CircuitPostProcessor.available_quantities_categories
+      
+      
+      CircuitPostProcessor.available_report_quantities
+      
+      
+      CircuitPostProcessor.copy_report_data
+      
+      
+      CircuitPostProcessor.create_ami_initial_response_plot
+      
+      
+      CircuitPostProcessor.create_ami_statistical_eye_plot
+      
+      
+      CircuitPostProcessor.create_rectangular_plot
+      
+      
+      CircuitPostProcessor.create_report
+      
+      
+      CircuitPostProcessor.create_report_from_configuration
+      
+      
+      CircuitPostProcessor.create_statistical_eye_plot
+      
+      
+      CircuitPostProcessor.delete_report
+      
+      
+      CircuitPostProcessor.export_report_to_csv
+      
+      
+      CircuitPostProcessor.export_report_to_file
+      
+      
+      CircuitPostProcessor.export_report_to_jpg
+      
+      
+      CircuitPostProcessor.get_report_data
+      
+      
+      CircuitPostProcessor.get_solution_data
+      
+      
+      CircuitPostProcessor.get_solution_data_per_variation
+      
+      
+      CircuitPostProcessor.rename_report
+      
+      
+      CircuitPostProcessor.sample_ami_waveform
+      
+      
+      CircuitPostProcessor.sample_waveform
+      
+      
+      CircuitPostProcessor.steal_focus_oneditor
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      
+      CircuitPostProcessor.all_report_names
+      
+      
+      CircuitPostProcessor.available_report_types
+      
+      
+      CircuitPostProcessor.logger
+      
+      
+      CircuitPostProcessor.modeler
+      
+      
+      CircuitPostProcessor.oreportsetup
+      
+      
+      CircuitPostProcessor.post_solution_type
+      
+   
+   

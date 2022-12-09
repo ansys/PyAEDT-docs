@@ -1,0 +1,6 @@
+mesh
+====
+
+.. currentmodule:: pyaedt.circuit
+
+.. autoproperty:: Circuit.mesh

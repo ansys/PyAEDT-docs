@@ -1,0 +1,6 @@
+create\_linear\_count\_sweep
+============================
+
+.. currentmodule:: pyaedt.modules.SolveSetup
+
+.. automethod:: SetupHFSS.create_linear_count_sweep

@@ -1,0 +1,6 @@
+copy\_report\_data
+==================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.copy_report_data

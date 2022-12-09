@@ -1,0 +1,6 @@
+steal\_focus\_oneditor
+======================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.steal_focus_oneditor

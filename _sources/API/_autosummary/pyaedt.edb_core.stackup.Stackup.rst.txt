@@ -1,0 +1,79 @@
+﻿pyaedt.edb\_core.stackup.Stackup
+================================
+
+.. currentmodule:: pyaedt.edb_core.stackup
+
+.. autoclass:: Stackup
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      Stackup.add_layer
+      
+      
+      Stackup.adjust_solder_dielectrics
+      
+      
+      Stackup.create_symmetric_stackup
+      
+      
+      Stackup.export_stackup
+      
+      
+      Stackup.flip_design
+      
+      
+      Stackup.get_layout_thickness
+      
+      
+      Stackup.import_stackup
+      
+      
+      Stackup.place_a3dcomp_3d_placement
+      
+      
+      Stackup.place_in_layout
+      
+      
+      Stackup.place_in_layout_3d_placement
+      
+      
+      Stackup.remove_layer
+      
+      
+      Stackup.stackup_limits
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      
+      Stackup.layer_types
+      
+      
+      Stackup.layers
+      
+      
+      Stackup.non_stackup_layers
+      
+      
+      Stackup.signal_layers
+      
+      
+      Stackup.stackup_layers
+      
+   
+   

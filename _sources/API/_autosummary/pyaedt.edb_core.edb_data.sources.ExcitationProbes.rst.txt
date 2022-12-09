@@ -1,0 +1,43 @@
+﻿pyaedt.edb\_core.edb\_data.sources.ExcitationProbes
+===================================================
+
+.. currentmodule:: pyaedt.edb_core.edb_data.sources
+
+.. autoclass:: ExcitationProbes
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      
+      ExcitationProbes.boundary_type
+      
+      
+      ExcitationProbes.name
+      
+      
+      ExcitationProbes.net
+      
+      
+      ExcitationProbes.net_name
+      
+      
+      ExcitationProbes.terminal_type
+      
+   
+   

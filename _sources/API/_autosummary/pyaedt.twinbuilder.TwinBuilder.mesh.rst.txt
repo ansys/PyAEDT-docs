@@ -1,0 +1,6 @@
+mesh
+====
+
+.. currentmodule:: pyaedt.twinbuilder
+
+.. autoproperty:: TwinBuilder.mesh

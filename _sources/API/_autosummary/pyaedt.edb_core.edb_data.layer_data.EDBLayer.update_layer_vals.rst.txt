@@ -1,0 +1,6 @@
+update\_layer\_vals
+===================
+
+.. currentmodule:: pyaedt.edb_core.edb_data.layer_data
+
+.. automethod:: EDBLayer.update_layer_vals

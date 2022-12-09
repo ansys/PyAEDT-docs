@@ -1,0 +1,6 @@
+create\_ami\_statistical\_eye\_plot
+===================================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.create_ami_statistical_eye_plot

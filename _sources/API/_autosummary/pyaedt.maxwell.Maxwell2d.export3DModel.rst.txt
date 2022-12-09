@@ -1,0 +1,6 @@
+export3DModel
+=============
+
+.. currentmodule:: pyaedt.maxwell
+
+.. automethod:: Maxwell2d.export3DModel

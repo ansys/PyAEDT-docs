@@ -1,0 +1,6 @@
+thickness\_value
+================
+
+.. currentmodule:: pyaedt.edb_core.edb_data.layer_data
+
+.. autoproperty:: EDBLayer.thickness_value

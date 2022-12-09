@@ -1,0 +1,259 @@
+
+
+.. _sphx_glr_examples_02-HFSS:
+
+HFSS examples
+~~~~~~~~~~~~~
+These examples use PyAEDT to show some end-to-end workflows for HFSS, HFSS 3D Layout,
+and HFSS SBR+. This includes model generation, setup, meshing, and postprocessing.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="HFSS: advanced far field postprocessing">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_Advanced_Far_Field_thumb.png
+    :alt: HFSS: advanced far field postprocessing
+
+  :ref:`sphx_glr_examples_02-HFSS_Advanced_Far_Field.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS: advanced far field postprocessing</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="HFSS: component antenna array">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_Array_thumb.png
+    :alt: HFSS: component antenna array
+
+  :ref:`sphx_glr_examples_02-HFSS_Array.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS: component antenna array</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="HFSS 3D Layout: PCB and EDB in 3D layout">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_EDB_in_3DLayout_thumb.png
+    :alt: HFSS 3D Layout: PCB and EDB in 3D layout
+
+  :ref:`sphx_glr_examples_02-HFSS_EDB_in_3DLayout.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS 3D Layout: PCB and EDB in 3D layout</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="HFSS: flex cable CPWG">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_Flex_CPWG_thumb.png
+    :alt: HFSS: flex cable CPWG
+
+  :ref:`sphx_glr_examples_02-HFSS_Flex_CPWG.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS: flex cable CPWG</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="HFSS 3D Layout: parametric via analysis">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_HFSS3DLayout_Via_thumb.png
+    :alt: HFSS 3D Layout: parametric via analysis
+
+  :ref:`sphx_glr_examples_02-HFSS_HFSS3DLayout_Via.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS 3D Layout: parametric via analysis</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="HFSS: choke">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_HFSS_Choke_thumb.png
+    :alt: HFSS: choke
+
+  :ref:`sphx_glr_examples_02-HFSS_HFSS_Choke.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS: choke</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="HFSS: dipole antenna">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_HFSS_Dipole_thumb.png
+    :alt: HFSS: dipole antenna
+
+  :ref:`sphx_glr_examples_02-HFSS_HFSS_Dipole.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS: dipole antenna</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="HFSS: spiral inductor">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_HFSS_Spiral_thumb.png
+    :alt: HFSS: spiral inductor
+
+  :ref:`sphx_glr_examples_02-HFSS_HFSS_Spiral.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS: spiral inductor</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="HFSS: 3D Components">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_Hfss3DComponent_thumb.png
+    :alt: HFSS: 3D Components
+
+  :ref:`sphx_glr_examples_02-HFSS_Hfss3DComponent.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS: 3D Components</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="#. Generate the database. #. Create the machine learning algorithm. #. Implement the model in a...">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_Machine_learning_applied_to_Patch_thumb.png
+    :alt: HFSS: machine learning applied to a patch
+
+  :ref:`sphx_glr_examples_02-HFSS_Machine_learning_applied_to_Patch.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">HFSS: machine learning applied to a patch</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="SBR+: doppler setup">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_SBR_Doppler_Example_thumb.png
+    :alt: SBR+: doppler setup
+
+  :ref:`sphx_glr_examples_02-HFSS_SBR_Doppler_Example.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">SBR+: doppler setup</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="SBR+: HFSS to SBR+ coupling">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_SBR_Example_thumb.png
+    :alt: SBR+: HFSS to SBR+ coupling
+
+  :ref:`sphx_glr_examples_02-HFSS_SBR_Example.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">SBR+: HFSS to SBR+ coupling</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="SBR+: HFSS to SBR+ time animation">
+
+.. only:: html
+
+  .. image:: /examples/02-HFSS/images/thumb/sphx_glr_SBR_Time_Plot_thumb.png
+    :alt: SBR+: HFSS to SBR+ time animation
+
+  :ref:`sphx_glr_examples_02-HFSS_SBR_Time_Plot.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">SBR+: HFSS to SBR+ time animation</div>
+    </div>
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-HFSS/Advanced_Far_Field
+   /examples/02-HFSS/Array
+   /examples/02-HFSS/EDB_in_3DLayout
+   /examples/02-HFSS/Flex_CPWG
+   /examples/02-HFSS/HFSS3DLayout_Via
+   /examples/02-HFSS/HFSS_Choke
+   /examples/02-HFSS/HFSS_Dipole
+   /examples/02-HFSS/HFSS_Spiral
+   /examples/02-HFSS/Hfss3DComponent
+   /examples/02-HFSS/Machine_learning_applied_to_Patch
+   /examples/02-HFSS/SBR_Doppler_Example
+   /examples/02-HFSS/SBR_Example
+   /examples/02-HFSS/SBR_Time_Plot
+

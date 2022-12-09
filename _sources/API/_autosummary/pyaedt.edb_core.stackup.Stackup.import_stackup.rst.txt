@@ -1,0 +1,6 @@
+import\_stackup
+===============
+
+.. currentmodule:: pyaedt.edb_core.stackup
+
+.. automethod:: Stackup.import_stackup

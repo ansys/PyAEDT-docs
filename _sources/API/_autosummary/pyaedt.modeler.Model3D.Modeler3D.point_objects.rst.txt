@@ -1,0 +1,6 @@
+point\_objects
+==============
+
+.. currentmodule:: pyaedt.modeler.Model3D
+
+.. autoproperty:: Modeler3D.point_objects

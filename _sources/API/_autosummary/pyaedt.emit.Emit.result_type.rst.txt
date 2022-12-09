@@ -1,0 +1,6 @@
+result\_type
+============
+
+.. currentmodule:: pyaedt.emit
+
+.. automethod:: Emit.result_type

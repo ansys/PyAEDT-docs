@@ -1,0 +1,6 @@
+no\_nets
+========
+
+.. currentmodule:: pyaedt.modeler.Primitives3DLayout
+
+.. autoproperty:: Primitives3DLayout.no_nets

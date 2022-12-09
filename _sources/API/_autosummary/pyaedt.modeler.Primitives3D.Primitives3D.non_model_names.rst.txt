@@ -1,0 +1,6 @@
+non\_model\_names
+=================
+
+.. currentmodule:: pyaedt.modeler.Primitives3D
+
+.. autoproperty:: Primitives3D.non_model_names

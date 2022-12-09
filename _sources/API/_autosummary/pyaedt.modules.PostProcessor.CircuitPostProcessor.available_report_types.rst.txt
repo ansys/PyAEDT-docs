@@ -1,0 +1,6 @@
+available\_report\_types
+========================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. autoproperty:: CircuitPostProcessor.available_report_types

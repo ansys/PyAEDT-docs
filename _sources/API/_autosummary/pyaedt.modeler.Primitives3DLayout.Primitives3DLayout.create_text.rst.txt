@@ -1,0 +1,6 @@
+create\_text
+============
+
+.. currentmodule:: pyaedt.modeler.Primitives3DLayout
+
+.. automethod:: Primitives3DLayout.create_text

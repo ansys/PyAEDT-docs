@@ -1,0 +1,6 @@
+antipad\_radius
+===============
+
+.. currentmodule:: pyaedt.modeler.stackup_3d
+
+.. autoproperty:: PadstackLayer.antipad_radius

@@ -1,0 +1,6 @@
+tx\_rx\_mode
+============
+
+.. currentmodule:: pyaedt.emit
+
+.. automethod:: Emit.tx_rx_mode

@@ -1,0 +1,6 @@
+create\_report
+==============
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.create_report

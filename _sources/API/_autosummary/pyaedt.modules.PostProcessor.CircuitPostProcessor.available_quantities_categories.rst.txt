@@ -1,0 +1,6 @@
+available\_quantities\_categories
+=================================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.available_quantities_categories

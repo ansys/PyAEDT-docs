@@ -1,0 +1,6 @@
+logger
+======
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. autoproperty:: CircuitPostProcessor.logger

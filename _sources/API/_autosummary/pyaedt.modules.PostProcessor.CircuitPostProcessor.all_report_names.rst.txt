@@ -1,0 +1,6 @@
+all\_report\_names
+==================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. autoproperty:: CircuitPostProcessor.all_report_names

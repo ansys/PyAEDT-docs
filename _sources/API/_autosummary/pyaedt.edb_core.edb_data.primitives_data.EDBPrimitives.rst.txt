@@ -1,0 +1,70 @@
+﻿pyaedt.edb\_core.edb\_data.primitives\_data.EDBPrimitives
+=========================================================
+
+.. currentmodule:: pyaedt.edb_core.edb_data.primitives_data
+
+.. autoclass:: EDBPrimitives
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      EDBPrimitives.area
+      
+      
+      EDBPrimitives.delete
+      
+      
+      EDBPrimitives.get_connected_object_id_set
+      
+      
+      EDBPrimitives.is_arc
+      
+      
+      EDBPrimitives.points
+      
+      
+      EDBPrimitives.points_raw
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      
+      EDBPrimitives.id
+      
+      
+      EDBPrimitives.is_void
+      
+      
+      EDBPrimitives.layer
+      
+      
+      EDBPrimitives.layer_name
+      
+      
+      EDBPrimitives.net
+      
+      
+      EDBPrimitives.net_name
+      
+      
+      EDBPrimitives.type
+      
+      
+      EDBPrimitives.voids
+      
+   
+   

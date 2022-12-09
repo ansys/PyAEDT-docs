@@ -1,0 +1,6 @@
+existing\_analysis\_setups
+==========================
+
+.. currentmodule:: pyaedt.emit
+
+.. autoproperty:: Emit.existing_analysis_setups

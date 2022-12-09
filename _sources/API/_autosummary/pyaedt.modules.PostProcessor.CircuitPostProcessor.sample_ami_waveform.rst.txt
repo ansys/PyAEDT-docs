@@ -1,0 +1,6 @@
+sample\_ami\_waveform
+=====================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.sample_ami_waveform

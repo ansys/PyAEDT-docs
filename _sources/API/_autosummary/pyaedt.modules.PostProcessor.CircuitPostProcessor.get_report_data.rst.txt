@@ -1,0 +1,6 @@
+get\_report\_data
+=================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.get_report_data

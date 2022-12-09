@@ -1,0 +1,6 @@
+delete\_report
+==============
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.delete_report

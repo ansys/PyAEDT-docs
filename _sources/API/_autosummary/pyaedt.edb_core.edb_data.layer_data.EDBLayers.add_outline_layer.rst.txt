@@ -1,0 +1,6 @@
+add\_outline\_layer
+===================
+
+.. currentmodule:: pyaedt.edb_core.edb_data.layer_data
+
+.. automethod:: EDBLayers.add_outline_layer

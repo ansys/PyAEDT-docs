@@ -1,0 +1,6 @@
+analyze\_all
+============
+
+.. currentmodule:: pyaedt.icepak
+
+.. automethod:: Icepak.analyze_all

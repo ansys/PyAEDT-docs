@@ -1,0 +1,6 @@
+analysis\_setup
+===============
+
+.. currentmodule:: pyaedt.hfss
+
+.. autoproperty:: Hfss.analysis_setup

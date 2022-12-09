@@ -1,0 +1,6 @@
+available\_report\_quantities
+=============================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.available_report_quantities

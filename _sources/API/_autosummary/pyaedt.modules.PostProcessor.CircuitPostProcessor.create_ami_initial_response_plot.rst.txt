@@ -1,0 +1,6 @@
+create\_ami\_initial\_response\_plot
+====================================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.create_ami_initial_response_plot

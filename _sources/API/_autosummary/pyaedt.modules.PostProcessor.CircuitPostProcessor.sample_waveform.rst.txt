@@ -1,0 +1,6 @@
+sample\_waveform
+================
+
+.. currentmodule:: pyaedt.modules.PostProcessor
+
+.. automethod:: CircuitPostProcessor.sample_waveform

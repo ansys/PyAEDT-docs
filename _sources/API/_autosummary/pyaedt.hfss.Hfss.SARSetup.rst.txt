@@ -1,0 +1,6 @@
+SARSetup
+========
+
+.. currentmodule:: pyaedt.hfss
+
+.. automethod:: Hfss.SARSetup

@@ -1,0 +1,6 @@
+edit\_definition
+================
+
+.. currentmodule:: pyaedt.modeler.Object3d
+
+.. automethod:: UserDefinedComponent.edit_definition

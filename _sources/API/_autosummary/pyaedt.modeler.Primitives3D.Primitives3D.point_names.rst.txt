@@ -1,0 +1,6 @@
+point\_names
+============
+
+.. currentmodule:: pyaedt.modeler.Primitives3D
+
+.. autoproperty:: Primitives3D.point_names

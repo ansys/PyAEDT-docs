@@ -1,0 +1,6 @@
+split
+=====
+
+.. currentmodule:: pyaedt.modeler.Object3d
+
+.. automethod:: Object3d.split

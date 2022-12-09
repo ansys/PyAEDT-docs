@@ -1,0 +1,6 @@
+export3DModel
+=============
+
+.. currentmodule:: pyaedt.hfss
+
+.. automethod:: Hfss.export3DModel
